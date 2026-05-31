@@ -19,6 +19,12 @@ return {
         },
       },
       auto_integrations = true,
+      integrations = {
+        snacks = {
+          enabled = true,
+        },
+        which_key = true,
+      },
       color_overrides = {
         latte = {
           pink = '#e64553',
@@ -28,9 +34,14 @@ return {
         mocha = {
           pink = '#eba0ac',
           base = '#141414',
-          mauve = '#ed8796',
+          mauve = '#fab387',
         },
       },
+      custom_highlights = function(colors)
+        return {
+          Pmenu = { bg = colors.none },
+        }
+      end,
     },
   },
   {
