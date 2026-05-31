@@ -1,10 +1,10 @@
 return {
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    lazy = false,
-    priority = 1000,
-    opts = {
+  'catppuccin/nvim',
+  name = 'catppuccin',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require('catppuccin').setup {
       transparent_background = true,
       float = {
         transparent = true,
@@ -18,7 +18,10 @@ return {
           background = false,
         },
       },
-      auto_integrations = true,
+      integrations = {
+        mini = { enabled = true, indentscope_color = 'red' },
+        mason = true,
+      },
       color_overrides = {
         latte = {
           pink = '#e64553',
@@ -31,12 +34,8 @@ return {
           mauve = '#ed8796',
         },
       },
-    },
-  },
-  {
-    'LazyVim/LazyVim',
-    opts = {
-      colorscheme = 'catppuccin-nvim',
-    },
-  },
+    }
+
+    vim.cmd.colorscheme 'catppuccin-nvim'
+  end,
 }
