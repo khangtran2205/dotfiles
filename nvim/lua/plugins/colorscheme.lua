@@ -30,6 +30,7 @@ return {
           pink = '#e64553',
           base = '#ffffff',
           mauve = '#d20f39',
+          surface1 = '#e6e9ef',
         },
         mocha = {
           pink = '#eba0ac',
@@ -40,6 +41,7 @@ return {
       custom_highlights = function(colors)
         return {
           Pmenu = { bg = colors.none },
+          BlinkCmpMenuBorder = { bg = colors.none, fg = colors.none },
         }
       end,
     },
