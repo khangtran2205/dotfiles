@@ -57,7 +57,9 @@ return {
     }
     opts.sections.lualine_y = {
       { lsp_clients, separator = ' ', padding = { left = 1, right = 0 } },
-      { 'location', padding = { left = 0, right = 1 } },
+    }
+    opts.sections.lualine_z = {
+      { 'location', padding = { left = 1, right = 0 } },
     }
   end,
 }
