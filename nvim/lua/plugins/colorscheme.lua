@@ -21,6 +21,12 @@ return {
           pink = '#eba0ac',
           mauve = '#f38ba8',
         },
+        latte = {
+          base = '#ffffff',
+          pink = '#e64553',
+          mauve = '#d20f39',
+          surface1 = '#e6e9ef',
+        },
       },
       custom_highlights = function(colors)
         return {
