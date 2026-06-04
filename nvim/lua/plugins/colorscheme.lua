@@ -1,25 +1,28 @@
 return {
   {
-    'webhooked/kanso.nvim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     lazy = false,
     priority = 1000,
     opts = {
-      italics = false,
-      compile = true,
-      transparent = true,
-      background = {
-        dark = 'zen',
+      transparent_background = true,
+      float = {
+        transparent = true,
+        solid = true,
       },
-      minimal = true,
-      foreground = 'saturated',
-      colors = {
-        theme = {
-          all = {
-            ui = { float = { bg = 'none' }, pmenu = { bg = 'none' } },
-          },
+      term_colors = true,
+      lsp_style = {
+        inlay_hints = { background = false },
+      },
+      auto_integrations = true,
+      color_overrides = {
+        mocha = {
+          base = '#141414',
+          pink = '#eba0ac',
+          mauve = '#f38ba8',
         },
       },
-      overrides = function(colors)
+      custom_highlights = function(colors)
         return {
           Pmenu = { bg = colors.none },
           BlinkCmpMenuBorder = { bg = colors.none, fg = colors.none },
@@ -30,7 +33,7 @@ return {
   {
     'LazyVim/LazyVim',
     opts = {
-      colorscheme = 'kanso',
+      colorscheme = 'catppuccin-nvim',
     },
   },
 }
