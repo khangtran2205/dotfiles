@@ -12,41 +12,6 @@ return {
       return ' ' .. table.concat(names, ', ')
     end
 
-    local transparent = { bg = 'NONE' }
-
-    opts.options.theme = {
-      normal = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-      insert = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-      visual = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-      replace = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-      command = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-      inactive = {
-        a = transparent,
-        b = transparent,
-        c = transparent,
-      },
-    }
-
     opts.options.section_separators = {
       left = '',
       right = '',
@@ -56,10 +21,10 @@ return {
       right = '',
     }
     opts.sections.lualine_y = {
-      { lsp_clients, separator = ' ', padding = { left = 1, right = 0 } },
+      { lsp_clients, separator = ' ', padding = { left = 1, right = 1 } },
     }
     opts.sections.lualine_z = {
-      { 'location', padding = { left = 1, right = 0 } },
+      { 'location', padding = { left = 1, right = 1 } },
     }
   end,
 }
