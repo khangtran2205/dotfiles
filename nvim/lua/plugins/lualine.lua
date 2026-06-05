@@ -12,14 +12,6 @@ return {
       return ' ' .. table.concat(names, ', ')
     end
 
-    opts.options.section_separators = {
-      left = '',
-      right = '',
-    }
-    opts.options.component_separators = {
-      left = '',
-      right = '',
-    }
     opts.sections.lualine_y = {
       { lsp_clients, separator = ' ', padding = { left = 1, right = 1 } },
     }
