@@ -1,0 +1,16 @@
+font-family = Maple Mono NF
+font-size = 15.5
+font-style = ExtraBold
+font-style-bold = ExtraBold
+font-style-italic = ExtraBold Italic
+font-style-bold-italic = ExtraBold Italic
+copy-on-select = clipboard
+macos-titlebar-style = transparent
+cursor-style = "bar"
+cursor-style-blink = true
+auto-update = download
+theme = dark:catppuccin-mocha.conf,light:catppuccin-latte.conf
+window-padding-x = 5
+window-padding-y = 10
+background-opacity = 0.8
+background-blur = macos-glass-regular
