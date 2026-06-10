@@ -1,0 +1,57 @@
+[init]
+	defaultBranch = main
+[user]
+	name = khangtran2205
+	email = procango2003@gmail.com
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[merge]
+	conflictstyle = zdiff3
+[pull]
+	rebase = true
+[core]
+	fsmonitor = true
+	untrackedCache = true
+[alias]
+	s = status -sb
+	slog = log --pretty=format:'%C(auto)%h %C(red)%as %C(blue)%aN%C(auto)%d%C(green) %s'
+	cm = commit -m
+	undo = reset HEAD~1 --mixed
+	staa = !git stash apply && git stash drop
+	amend = commit --amend --no-edit
+	staged  = diff --cached HEAD^
+	ri = rebase -i
+	pc = !git push origin "$(git symbolic-ref --short HEAD)"
+	aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	first = rev-list --max-parents=0 HEAD
+	incoming = log HEAD..@{upstream}
+	outgoing = log @{upstream}..HEAD
+	outgoing = log @{u}..
+	gg = grep -E --line-number
+	catp = cat-file -p
+	untrack = rm --cached
+	unadd = restore --staged
+	wdiff = diff -w --word-diff=color --ignore-space-at-eol
+	structure = log --oneline --simplify-by-decoration --graph --all
