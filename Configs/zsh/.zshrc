@@ -87,7 +87,15 @@ setopt hist_find_no_dups
 # Aliases
 alias tnew="tmux new -s"
 alias tatt="tmux a -t"
+alias vi=nvim
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+
+# Added by Antigravity IDE
+export PATH="/Users/khang/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/khang/.local/bin:$PATH"
